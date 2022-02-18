@@ -3,7 +3,7 @@
     "name": "A1",
     "timelimit": 1000,
     "label": "Wood",
-    "length": 210,
+    "length": 100,
     "thickness": 3,
     "width": 16,
     "timeshift": 0,

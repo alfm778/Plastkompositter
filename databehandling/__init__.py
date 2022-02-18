@@ -314,6 +314,7 @@ def get_modulus(strains, stresses, target_low_strain=0.001, target_high_strain=0
     # print(f"{low_stress=}, {high_stress=}, {low_strain=}, {high_strain=}")
 
     # Calculating modulus
+    print("high strain", high_strain, "low strain", low_strain)
     modulus = (high_stress - low_stress) / (high_strain - low_strain)
     # print(f"Estimated high stress in target: {high_strain * modulus}")
     return modulus
