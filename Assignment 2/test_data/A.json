@@ -1,0 +1,14 @@
+[
+  {
+    "name": "A1",
+    "timelimit": 1000,
+    "label": "Wood",
+    "length": 210,
+    "thickness": 3,
+    "width": 16,
+    "timeshift": 0,
+    "parse_function": "read_flex_rectangular",
+    "filename": "Gruppe_5_1_2022-02-18_06-42-06.csv",
+    "trim_rows": 0
+  }
+]

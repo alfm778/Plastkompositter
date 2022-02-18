@@ -1,0 +1,14 @@
+[
+  {
+    "name": "C1",
+    "timelimit": 1000,
+    "label": "E-Glass [45/-45/0/0/0/-45/45]",
+    "length": 100,
+    "thickness": 4,
+    "width": 25.25,
+    "timeshift": 0,
+    "parse_function": "read_flex_rectangular",
+    "filename": "Gruppe_5_3_2022-02-18_07-00-43.csv",
+    "trim_rows": 0
+  }
+]

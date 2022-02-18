@@ -1,0 +1,14 @@
+[
+  {
+    "name": "B1",
+    "timelimit": 1000,
+    "label": "Carbon fiber composite",
+    "length": 100,
+    "thickness": 1.5,
+    "width": 15,
+    "timeshift": 0,
+    "parse_function": "read_flex_rectangular",
+    "filename": "Gruppe_5_2_2022-02-18_06-55-39.csv",
+    "trim_rows": 0
+  }
+]
