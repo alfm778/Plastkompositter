@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 
-
 def read_gauge(datapath, data: dict, limit=False, timeshift_true=False, trim_rows=0):
     """This parse function is capable of reading data produced by
     standard strain gauges by the tensile test machine in the
@@ -158,7 +157,7 @@ def read_tensile2_lbf(datapath, metadata: dict, limit=False, length_adjust=0, ti
 
 def read_flex_rectangular(datapath, metadata: dict, limit=False, length_adjust=0, trim_rows=0, timeshift_true=False):
     """This parse function is capable of the load - displacement data from the
-    tensile test machine in the composite lab."""
+    3-point bending test machine in the lab at 'maskinbygget'."""
     trim_rownums = list(range(0,trim_rows))
     df = pd.read_csv(datapath).reset_index().drop(trim_rownums)
     width = metadata["width"]
@@ -269,7 +268,6 @@ def read_flex_circular(datapath, metadata: dict, limit=False, length_adjust=0, t
 
     return df
 
-
 def chart_axes(xlabel="Strain", ylabel="Stress", title="Choose title"):
     fig = plt.figure()
     fig.title = title
@@ -314,7 +312,7 @@ def get_modulus(strains, stresses, target_low_strain=0.001, target_high_strain=0
     # print(f"{low_stress=}, {high_stress=}, {low_strain=}, {high_strain=}")
 
     # Calculating modulus
-    print("high strain", high_strain, "low strain", low_strain)
+    #print("high strain", high_strain, "low strain", low_strain)
     modulus = (high_stress - low_stress) / (high_strain - low_strain)
     # print(f"Estimated high stress in target: {high_strain * modulus}")
     return modulus
@@ -356,7 +354,6 @@ def get_poissont(long_strains, trans_strains, target_low_strain, target_high_str
     poissont_ratio = (high_trans_strain - low_trans_strain) / (high_long_strain - low_long_strain)
     # print(f"Estimated high stress in target: {high_strain * modulus}")
     return poissont_ratio
-
 
 def get_strength():
     pass
